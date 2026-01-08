@@ -3,6 +3,10 @@ import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const whatsappNumber = "50671424137";
+  const whatsappMessage = encodeURIComponent("Hola Monge Vargas & Asociados, me gustaría solicitar una consulta profesional.");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   return (
     <footer id="contacto" className="bg-brand-secondary text-white pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -22,7 +26,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="flex space-x-4 mt-8">
                 <a 
-                  href="https://wa.me/50671424137" 
+                  href={whatsappUrl}
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-brand-accent hover:text-brand-primary transition-all text-white" 
@@ -67,18 +71,22 @@ const Footer: React.FC = () => {
 
           <div>
             <h4 className="font-serif text-lg mb-6 text-brand-accent">Contacto</h4>
-            <ul className="space-y-4 text-sm text-gray-400 font-light">
+            <ul className="space-y-4 text-[13px] text-gray-400 font-light">
               <li className="flex items-center gap-3">
-                <Mail size={16} className="text-brand-accent" />
-                <a href="mailto:mongevargasyasoc@gmail.com" className="hover:text-white transition-colors">mongevargasyasoc@gmail.com</a>
+                <Mail size={16} className="text-brand-accent flex-shrink-0" />
+                <a href="mailto:tmonge@mongevargasasociados.com" className="hover:text-white transition-colors truncate">tmonge@mongevargasasociados.com</a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-brand-accent" />
+                <Mail size={16} className="text-brand-accent flex-shrink-0" />
+                <a href="mailto:contabilidad@mongevargasasociados.com" className="hover:text-white transition-colors truncate">contabilidad@mongevargasasociados.com</a>
+              </li>
+              <li className="flex items-center gap-3 pt-2">
+                <Phone size={16} className="text-brand-accent flex-shrink-0" />
                 <a href="tel:+50671424137" className="hover:text-white transition-colors">+506 7142-4137</a>
               </li>
               <li className="flex items-center gap-3">
-                <MapPin size={16} className="text-brand-accent" />
-                <span>Desamparados, Costa Rica</span>
+                <MapPin size={16} className="text-brand-accent flex-shrink-0" />
+                <span>Curridabat, San José</span>
               </li>
             </ul>
           </div>
